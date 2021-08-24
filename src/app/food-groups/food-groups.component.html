@@ -1,0 +1,5 @@
+<section>
+    <img *ngFor="let group of foodGroups; first as isFirst;last as isLast"
+    src="{{ group.icon}}" alt="{{ group.name}}"
+    [class.isLast] = "isLast" [class.isFirst] = "isFirst"> 
+</section>

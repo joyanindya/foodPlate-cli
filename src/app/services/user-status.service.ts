@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 
 import { User } from '../models/User';
 
-// @Injectable({
-//   providedIn: 'root'
-// })
+@Injectable({
+  providedIn: 'root'
+})
 export class UserStatusService {
 
   registered: boolean;

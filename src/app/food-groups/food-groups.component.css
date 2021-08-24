@@ -1,0 +1,17 @@
+img {
+  display: inline;
+}
+
+.isFirst {
+  background-color: burlywood;
+  border-radius: 1px solid #000;
+  border-radius: 50%;
+  padding: 0.15em;
+}
+
+.isLast {
+  background-color: green;
+  border-radius: 1px solid #000;
+  border-radius: 50%;
+  padding: 0.15em;
+}
