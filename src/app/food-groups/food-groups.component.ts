@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FoodGroupsService } from '../services/food-groups.service';
 
 @Component({
@@ -9,12 +10,25 @@ import { FoodGroupsService } from '../services/food-groups.service';
 export class FoodGroupsComponent implements OnInit {
 
   foodGroups;
+  iconStyles = {
+    'cursor': 'pointer',
+    'display': 'inline'
+  };
 
-  constructor(private foodGroupService: FoodGroupsService) { }
+  constructor(private foodGroupService: FoodGroupsService,
+    private router: Router,
+    private route: ActivatedRoute) {
+
+  }
 
   ngOnInit(): void {
     this.foodGroups = this.foodGroupService.getFoodGroups();
     console.log(this.foodGroups);
+  }
+
+  showGroup(group) {
+    console.log(group.name);
+    this.router.navigate([group.name], { relativeTo: this.route });
   }
 
 }
