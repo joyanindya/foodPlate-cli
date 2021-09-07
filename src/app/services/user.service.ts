@@ -18,9 +18,9 @@ export class UserService {
        this.currentUser = new BehaviorSubject(user);
        return user;
     }else{
+      this.user.reqsStatus.fruitMet = true;
         return this.user;
     }
-    return this.user;
   }
 
   updateUser(user:User){

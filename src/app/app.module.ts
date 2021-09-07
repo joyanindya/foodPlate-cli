@@ -39,7 +39,8 @@ import { FoodComponent } from './food/food.component';
     FarmersMarketsComponent,
     ExercisesComponent,
     TodaysGoalComponent,
-    FoodComponent],
+    FoodComponent
+  ],
   imports: [
     AppRoutingModule,
     CommonModule,
