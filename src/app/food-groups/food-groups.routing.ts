@@ -5,10 +5,12 @@ import { FruitDetailComponent } from './food-detail/fruit-detail/fruit-detail.co
 import { FoodGroupsComponent } from './food-groups.component';
 import { GrainsDetailComponent } from './food-detail/grains-detail/grains-detail.component';
 import { FoodGroupsGuardService } from '../services/food-groups-guard.service';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 export const foodGroupsRoutes = [
     {
-        path: 'foodGroups',
+        path: '',
         canActivateChild: [ FoodGroupsGuardService ],
         children: [
             {
@@ -35,3 +37,16 @@ export const foodGroupsRoutes = [
         ]
     }
 ];
+
+@NgModule({
+    imports: [
+        RouterModule.forChild(
+            foodGroupsRoutes)
+    ],
+    exports: [
+        RouterModule
+    ],
+})
+
+export class FoodGroupsRoutingModule {
+}

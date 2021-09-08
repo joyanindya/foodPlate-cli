@@ -11,7 +11,6 @@ import { MainComponent } from './main/main.component';
 import { HomeBtnComponent } from './home-btn/home-btn.component';
 import { PlateComponent } from './plate/plate.component';
 import { MessageComponent } from './message/message.component';
-import { FoodGroupsModule } from './food-groups/food-groups.module';
 import { NavComponent } from './nav/nav.component';
 import { RegisterComponent } from './register/register.component';
 import { DefaultComponent } from './components/default/default.component';
@@ -22,6 +21,7 @@ import { FoodDetailModule } from './food-groups/food-detail/food-detail.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodaysGoalComponent } from './todays-goal/todays-goal.component';
 import { FoodComponent } from './food/food.component';
+import { GoalsComponent } from './goals/goals.component';
 
 
 
@@ -39,13 +39,13 @@ import { FoodComponent } from './food/food.component';
     FarmersMarketsComponent,
     ExercisesComponent,
     TodaysGoalComponent,
-    FoodComponent
+    FoodComponent,
+    GoalsComponent
   ],
   imports: [
     AppRoutingModule,
     CommonModule,
     BrowserModule,
-    FoodGroupsModule,
     FoodDetailModule,
     FormsModule,
     ReactiveFormsModule,
